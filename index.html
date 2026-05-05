@@ -24,8 +24,22 @@
       "assets/img/NiceNatureChibi1.webp"
     ];
 
-    const randomIndex = Math.floor(Math.random() * chibiCharacters.length);
-    document.getElementById("umaCharacter").src = chibiCharacters[randomIndex];
+    const backgrounds = [
+      "assets/img/umaclickerbg1.png",
+      "assets/img/umaclickerbg2.png",
+      "assets/img/umaclickerbg3.png",
+      "assets/img/umaclickerbg4.png",
+      "assets/img/umaclickerbg5.png"
+    ];
+
+    const randomCharacter =
+      chibiCharacters[Math.floor(Math.random() * chibiCharacters.length)];
+
+    const randomBackground =
+      backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+    document.getElementById("umaCharacter").src = randomCharacter;
+    document.body.style.backgroundImage = `url('${randomBackground}')`;
   </script>
 
   <script src="./assets/js/main.js"></script>
